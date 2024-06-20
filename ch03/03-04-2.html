@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-04</title>
+  </head>
+  <body>
+    <div id="app">
+      <input id="a" type="text"/>
+      <br />
+      입력하신 이름 : <span>{{name}}</span>
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      var vm = Vue.createApp({
+        name: "App",
+        data() {
+          return { name: "" };
+        },
+      }).mount("#app");
+      //순수 자바스크립트를 사용하여 [입력확인] 버튼 클릭시 입력한 값을 읽어 화면에 출력하게 구현함 
+      //id가 a인 객체를 자바스크립트에서 사용할 수 있는 객체로 얻는다 
+      const a = document.querySelector("#a");
+      //a인 객체를 자바스크립트에 input이벤트가 발생하면 처리 할 수 있게 화살표 함수, 람다 함수로 변경한다
+      a.addEventListener("input", e => {
+        //model의 name 값을 변경한다
+        vm.name = a.value;
+      });
+      
+    </script>
+  </body>
+</html>

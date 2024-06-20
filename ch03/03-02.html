@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table, td, th {
+        border: 1px solid;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+    </style>
+    <title>03-02</title>
+  </head>
+  <body>
+    <div>
+      <h2>v-text, v-html의 사용법</h2>
+      <table>
+        <tr>
+          <th>v-text, {{}}</th>
+          <td>innerText 속성</td>
+        </tr>
+        <tr>
+          <th>v-html</th>
+          <td>innerHTML 속성</td>
+        </tr>
+      </table>
+      
+    </div>
+    <div id="app">
+      <h2 v-html="message"></h2>
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      var model = { message: "Hello Vue3!" };
+      var vm = Vue.createApp({
+        name: "App",
+        data() {
+          return model;
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

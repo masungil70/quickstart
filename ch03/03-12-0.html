@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>03-12</title>
+    <style>
+      #list {
+        width: 600px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      #list td,
+      #list th {
+        border: 1px solid black;
+        text-align: center;
+      }
+      #list > thead > tr {
+        color: yellow;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <table id="list">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>전화번호</th>
+          </tr>
+        </thead>
+        <tbody id="contacts">
+          <tr >
+            <td>1011</td>
+            <td>RM</td>
+            <td>010-3456-8299</td>
+          </tr>
+          <tr >
+            <td>1012</td>
+            <td>정국</td>
+            <td>010-3456-8298</td>
+          </tr>
+          <tr >
+            <td>1013</td>
+            <td>제이홉</td>
+            <td>010-3456-8297</td>
+          </tr>
+          <tr >
+            <td>1014</td>
+            <td>슈가</td>
+            <td>010-3456-8296</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
